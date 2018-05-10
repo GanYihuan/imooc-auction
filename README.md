@@ -150,3 +150,11 @@ _✨✨✨_
 ```
 {path:/product, component: ProductComponent, data: [{isProd: true}]} => ActivatedRoute.data[0][isProd] 
 ```
+
+
+## 3-3: redirected route
+_✨✨_
+##### visit a url, jump other url
+```
+www.aaa.com => www.aaa.com/products
+```

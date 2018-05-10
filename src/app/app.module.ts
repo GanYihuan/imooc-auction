@@ -46,7 +46,8 @@ import {RouterHomeComponent} from './router-home/router-home.component';
 import {RouterCode404Component} from './router-code404/router-code404.component';
 
 const routes: Routes = [
-  {path: '', component: RouterHomeComponent},
+  {path: '', redirectTo: 'home', pathMatch: 'full'},
+  {path: 'home', component: RouterHomeComponent},
   {path: 'product/:id', component: RouterProductComponent},
   {path: '**', component: RouterCode404Component}
 ];
