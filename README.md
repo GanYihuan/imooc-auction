@@ -62,3 +62,34 @@ _✨✨_
 _✨✨_
 ##### introduce run process
 ##### npm start
+
+
+## 2-5: app prepare
+_✨✨_
+##### install
+```
+npm install jquery --save
+npm install @types/jquery --save-dev
+npm install bootstrap --save
+npm install @types/bootstrap --save-dev
+``` 
+##### angular-cli.json
+```
+      "styles": [
+        "styles.css",
+        "../node_modules/bootstrap/dist/css/bootstrap.css"
+      ],
+      "scripts": [
+        "../node_modules/jquery/dist/jquery.js",
+        "../node_modules/bootstrap/dist/js/bootstrap.js"
+      ],
+```
+##### create component
+```
+ng g component navbar
+ng g component footer
+ng g component search
+ng g component carousel
+ng g component product
+ng g component stars
+```
