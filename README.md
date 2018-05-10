@@ -134,3 +134,19 @@ ng g component product
 ```
 (click)="toProductDetail()"
 ```
+
+
+## 3-3: route pass data
+_✨✨✨_
+##### Passing data in query parameters
+```
+/product?id=1&name=2 => ActivatedRoute.queryParams[id]
+``` 
+##### Passing data in the routing path
+```
+{path:/product/:id} => /product/1 => ActivatedRoute.params[id]
+``` 
+##### Passing data in a routing configuration
+```
+{path:/product, component: ProductComponent, data: [{isProd: true}]} => ActivatedRoute.data[0][isProd] 
+```

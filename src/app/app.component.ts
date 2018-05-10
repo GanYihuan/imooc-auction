@@ -7,13 +7,12 @@ import {Router} from '@angular/router';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  // get Router
   constructor(private router: Router) {
 
   }
 
   toProductDetail() {
-    this.router.navigate(['/product'], {
+    this.router.navigate(['/product', 2], {
       queryParams: {test: false}
     });
   }
