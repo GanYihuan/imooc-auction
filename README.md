@@ -124,6 +124,13 @@ _✨✨_
 
 
 ## 3-2: route basic
+_✨✨✨_
 ```
 ng new router --routing
+ng g component home
+ng g component product
+```
+##### event binding
+```
+(click)="toProductDetail()"
 ```
