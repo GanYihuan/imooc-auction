@@ -121,3 +121,9 @@ _✨✨_
 
 ## 3-1: route introduce
 _✨✨_
+
+
+## 3-2: route basic
+```
+ng new router --routing
+```
