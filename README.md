@@ -56,3 +56,9 @@ _✨✨_
 ##### test.js: auto test
 ##### tsconfig.app.json: typescript config
 ##### app.component.ts:  
+
+
+## 2-4: run angular app
+_✨✨_
+##### introduce run process
+##### npm start
