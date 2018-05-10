@@ -61,7 +61,9 @@ _✨✨_
 ## 2-4: run angular app
 _✨✨_
 ##### introduce run process
-##### npm start
+```
+npm start
+```
 
 
 ## 2-5: app prepare
@@ -93,3 +95,19 @@ ng g component carousel
 ng g component product
 ng g component stars
 ```
+
+
+## 2-6: app
+_✨✨_
+
+
+## 2-7: navbar and footer 
+_✨✨_
+
+
+## 2-8: search and carousel
+_✨✨_
+
+
+## 2-9: product
+_✨✨_
