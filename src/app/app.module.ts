@@ -44,11 +44,26 @@ import {Routes, RouterModule} from '@angular/router';
 import {RouterProductComponent} from './router-product/router-product.component';
 import {RouterHomeComponent} from './router-home/router-home.component';
 import {RouterCode404Component} from './router-code404/router-code404.component';
+import {ProductDescComponent} from './product-desc/product-desc.component';
+import {SellerInfoComponent} from './seller-info/seller-info.component';
 
 const routes: Routes = [
   {path: '', redirectTo: 'home', pathMatch: 'full'},
   {path: 'home', component: RouterHomeComponent},
-  {path: 'product/:id', component: RouterProductComponent},
+  {
+    path: 'product/:id',
+    component: RouterProductComponent,
+    children: [
+      {
+        path: '',
+        component: ProductDescComponent
+      },
+      {
+        path: 'seller/:id',
+        component: SellerInfoComponent
+      }
+    ]
+  },
   {path: '**', component: RouterCode404Component}
 ];
 
@@ -57,7 +72,9 @@ const routes: Routes = [
     AppComponent,
     RouterHomeComponent,
     RouterProductComponent,
-    RouterCode404Component
+    RouterCode404Component,
+    ProductDescComponent,
+    SellerInfoComponent
   ],
   imports: [
     BrowserModule,
