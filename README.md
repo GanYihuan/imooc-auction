@@ -29,9 +29,30 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 
 ## 2-2:
+_✨_
+##### angular introduce
+
+
+## 2-3:
+_✨✨_
 ##### init
 ```
 sudo npm install -g @angular/cli
 ng -v
 ng new imooc-auction
 ```
+
+
+## 2-3: dialog file introduce
+_✨✨_
+##### e2e: test
+##### .angular.cli.json: angular config
+##### karma.confi.js: auto test
+##### tslint.json: typScript code check
+##### assets: static file
+##### environments: config environment 
+##### main.js: entrance file 
+##### polyfills.ts: import library
+##### test.js: auto test
+##### tsconfig.app.json: typescript config
+##### app.component.ts:  
