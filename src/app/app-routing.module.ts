@@ -6,6 +6,8 @@ import {RouterCode404Component} from './router-code404/router-code404.component'
 import {ProductDescComponent} from './product-desc/product-desc.component';
 import {SellerInfoComponent} from './seller-info/seller-info.component';
 import {ChatComponent} from './chat/chat.component';
+import {LoginGuard} from './guard/login.guard';
+import {UnsavedGuard} from './guard/unsaved.guard';
 // import {LoginGuard} from './guard/login.guard';
 // import {UnsavedGuard} from './guard/unsaved.guard';
 // import {ProductResolve} from './guard/product.resolve';
@@ -18,8 +20,8 @@ const routes: Routes = [
   {
     path: 'product/:id',
     component: RouterProductComponent,
-    // canActivate: [LoginGuard],
-    // canDeactivate: [UnsavedGuard],
+    canActivate: [LoginGuard],
+    canDeactivate: [UnsavedGuard],
     // resolve: {product: ProductResolve},
     children: [
       {
@@ -32,7 +34,7 @@ const routes: Routes = [
       }
     ]
   },
-  // put last
+  // Put the final
   {path: '**', component: RouterCode404Component}
 ];
 
@@ -40,8 +42,8 @@ const routes: Routes = [
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule],
   providers: [
-    // LoginGuard,
-    // UnsavedGuard,
+    LoginGuard,
+    UnsavedGuard,
     // ProductResolve
   ]
 })

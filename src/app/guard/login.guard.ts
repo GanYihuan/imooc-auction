@@ -1,14 +1,7 @@
-import {CanActivate, ActivatedRouteSnapshot, RouterStateSnapshot} from '@angular/router';
-import {Observable} from '../../../node_modules/rxjs';
-
-/**
- * Created by zhailiang on 2017/1/23.
- */
+import {CanActivate} from '@angular/router';
 
 export class LoginGuard implements CanActivate {
-  canActivate(route: ActivatedRouteSnapshot, state: RouterStateSnapshot):
-    Observable<boolean> | Promise<boolean> | boolean {
-
+  canActivate() {
     const loggedIn: boolean = Math.random() < 0.5;
 
     if (!loggedIn) {
