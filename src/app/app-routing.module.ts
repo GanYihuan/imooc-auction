@@ -8,9 +8,7 @@ import {SellerInfoComponent} from './seller-info/seller-info.component';
 import {ChatComponent} from './chat/chat.component';
 import {LoginGuard} from './guard/login.guard';
 import {UnsavedGuard} from './guard/unsaved.guard';
-// import {LoginGuard} from './guard/login.guard';
-// import {UnsavedGuard} from './guard/unsaved.guard';
-// import {ProductResolve} from './guard/product.resolve';
+import {ProductResolve} from './guard/product.resolve';
 
 const routes: Routes = [
   // redirected route
@@ -22,7 +20,7 @@ const routes: Routes = [
     component: RouterProductComponent,
     canActivate: [LoginGuard],
     canDeactivate: [UnsavedGuard],
-    // resolve: {product: ProductResolve},
+    resolve: {product: ProductResolve},
     children: [
       {
         path: '',
@@ -44,7 +42,7 @@ const routes: Routes = [
   providers: [
     LoginGuard,
     UnsavedGuard,
-    // ProductResolve
+    ProductResolve
   ]
 })
 export class AppRoutingModule {
