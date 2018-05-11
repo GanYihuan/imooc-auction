@@ -7,7 +7,7 @@ import {ActivatedRoute} from '@angular/router';
   styleUrls: ['./seller-info.component.css']
 })
 export class SellerInfoComponent implements OnInit {
-  private sellerId: number;
+  public sellerId: number;
 
   constructor(private routeInfo: ActivatedRoute) {
   }
