@@ -159,6 +159,8 @@ _✨✨✨_
 ```
 {path:/product, component: ProductComponent, data: [{isProd: true}]} => ActivatedRoute.data[0][isProd] 
 ```
+##### snapshot:
+##### subscribe:
 
 
 ## 3-4: redirected route
