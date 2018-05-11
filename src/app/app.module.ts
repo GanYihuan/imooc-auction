@@ -46,10 +46,12 @@ import {RouterHomeComponent} from './router-home/router-home.component';
 import {RouterCode404Component} from './router-code404/router-code404.component';
 import {ProductDescComponent} from './product-desc/product-desc.component';
 import {SellerInfoComponent} from './seller-info/seller-info.component';
+import {ChatComponent} from './chat/chat.component';
 
 const routes: Routes = [
   {path: '', redirectTo: 'home', pathMatch: 'full'},
   {path: 'home', component: RouterHomeComponent},
+  {path: 'chat', component: ChatComponent, outlet: 'aux'},
   {
     path: 'product/:id',
     component: RouterProductComponent,
@@ -74,7 +76,8 @@ const routes: Routes = [
     RouterProductComponent,
     RouterCode404Component,
     ProductDescComponent,
-    SellerInfoComponent
+    SellerInfoComponent,
+    ChatComponent
   ],
   imports: [
     BrowserModule,
