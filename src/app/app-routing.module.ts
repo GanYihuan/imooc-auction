@@ -33,6 +33,7 @@ const routes: Routes = [
       }
     ]
   },
+  // put last
   {path: '**', component: RouterCode404Component}
 ];
 

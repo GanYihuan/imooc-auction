@@ -18,7 +18,8 @@
 
 
 <!-- -------------- router -------------- -->
-<!-- find root route -->
+<!-- '/' : find root route -->
+<!-- './' : find children route -->
 <a [routerLink]="['/home']">Home</a>
 <a [routerLink]="['/product', 1]" [queryParams]="{test: true}">Product Details</a>
 <input type="button" value="Product Details" (click)="toProductDetail()">

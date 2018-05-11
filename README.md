@@ -125,14 +125,23 @@ _✨✨_
 
 ## 3-2: route basic
 _✨✨✨_
+##### install
 ```
 ng new router --routing
+(--routing: add app-routing.module.ts)
+
 ng g component home
 ng g component product
 ```
+##### Routes, RouterOutlet, RouterLink
 ##### event binding
 ```
 (click)="toProductDetail()"
+```
+##### 404 
+```
+// put last
+  {path: '**', component: RouterCode404Component}
 ```
 
 
