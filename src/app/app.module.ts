@@ -47,6 +47,8 @@ import {RouterCode404Component} from './router-code404/router-code404.component'
 import {ProductDescComponent} from './product-desc/product-desc.component';
 import {SellerInfoComponent} from './seller-info/seller-info.component';
 import {ChatComponent} from './chat/chat.component';
+import {LoginGuard} from './guard/login.guard';
+import {UnsavedGuard} from './guard/unsaved.guard';
 
 const routes: Routes = [
   {path: '', redirectTo: 'home', pathMatch: 'full'},
@@ -55,6 +57,8 @@ const routes: Routes = [
   {
     path: 'product/:id',
     component: RouterProductComponent,
+    canActivate: [LoginGuard],
+    canDeactivate: [UnsavedGuard],
     children: [
       {
         path: '',
@@ -85,7 +89,10 @@ const routes: Routes = [
     HttpModule,
     RouterModule.forRoot(routes)
   ],
-  providers: [],
+  providers: [
+    LoginGuard,
+    UnsavedGuard
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule {

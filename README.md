@@ -152,7 +152,7 @@ _✨✨✨_
 ```
 
 
-## 3-3: redirected route
+## 3-4: redirected route
 _✨✨_
 ##### visit a url, jump other url
 ```
@@ -160,9 +160,13 @@ www.aaa.com => www.aaa.com/products
 ```
 
 
-## 3-4: children route
+## 3-5: children route
 _✨✨✨_
 
 
-## 3-4: auxiliary route
+## 3-8: auxiliary route
+_✨✨✨_
+
+
+## 3-7: route guards
 _✨✨✨_
