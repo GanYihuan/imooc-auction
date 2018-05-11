@@ -16,12 +16,12 @@ export class RouterProductComponent implements OnInit {
   }
 
   ngOnInit() {
-    //// <a [queryParams]="{test: true}">Product Details</a>
+    // <a [queryParams]="{test: true}">Product Details</a>
     this.test = this.routeInfo.snapshot.queryParams['test'];
-    //// <a [routerLink]="['/product', 1]">Product Details</a>
+    // <a [routerLink]="['/product', 1]">Product Details</a>
     this.productId = this.routeInfo.snapshot.params['id'];
-    //// this.router.navigate(['/product', 2], {})
-    //// when itself jump to itself: Product-detail, constructor run once, productId not change
+    // this.router.navigate(['/product', 2], {})
+    // when itself jump to itself: Product-detail, constructor run once, productId not change
     this.routeInfo.params.subscribe((params: Params) => (this.productId = params['id']));
     // this.routeInfo.params.subscribe((params: Params) => this.productId = params['id']);
     // this.routeInfo.data.subscribe((data: { product: RouterProduct }) => {

@@ -11,6 +11,7 @@ import {ChatComponent} from './chat/chat.component';
 // import {ProductResolve} from './guard/product.resolve';
 
 const routes: Routes = [
+  // redirected route
   {path: '', redirectTo: 'home', pathMatch: 'full'},
   {path: 'home', component: RouterHomeComponent},
   {path: 'chat', component: ChatComponent, outlet: 'aux'},

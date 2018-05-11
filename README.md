@@ -146,7 +146,7 @@ ng g component product
 
 
 ## 3-3: route pass data
-_✨✨✨_
+_✨✨✨✨_
 ##### Passing data in query parameters
 ```
 /product?id=1&name=2 => ActivatedRoute.queryParams[id]
