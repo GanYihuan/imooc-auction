@@ -168,5 +168,9 @@ _✨✨✨_
 _✨✨✨_
 
 
-## 3-7: route guards
+## 3-7: guards route
 _✨✨✨_
+
+
+## 3-8: resolve route
+_✨✨✨✨_

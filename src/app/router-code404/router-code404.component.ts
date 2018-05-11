@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 
 @Component({
   selector: 'app-router-code404',
@@ -6,10 +6,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./router-code404.component.css']
 })
 export class RouterCode404Component implements OnInit {
-
-  constructor() { }
+  constructor() {
+  }
 
   ngOnInit() {
   }
-
 }

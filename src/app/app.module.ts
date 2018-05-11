@@ -40,7 +40,6 @@ import {NgModule} from '@angular/core';
 import {FormsModule} from '@angular/forms';
 import {HttpModule} from '@angular/http';
 import {AppComponent} from './app.component';
-import {Routes, RouterModule} from '@angular/router';
 import {RouterProductComponent} from './router-product/router-product.component';
 import {RouterHomeComponent} from './router-home/router-home.component';
 import {RouterCode404Component} from './router-code404/router-code404.component';
@@ -49,29 +48,15 @@ import {SellerInfoComponent} from './seller-info/seller-info.component';
 import {ChatComponent} from './chat/chat.component';
 import {LoginGuard} from './guard/login.guard';
 import {UnsavedGuard} from './guard/unsaved.guard';
+import {ProductResolve} from './guard/product.resolve';
+import {AppRoutingModule} from './app-routing.module';
 
-const routes: Routes = [
-  {path: '', redirectTo: 'home', pathMatch: 'full'},
-  {path: 'home', component: RouterHomeComponent},
-  {path: 'chat', component: ChatComponent, outlet: 'aux'},
-  {
-    path: 'product/:id',
-    component: RouterProductComponent,
-    canActivate: [LoginGuard],
-    canDeactivate: [UnsavedGuard],
-    children: [
-      {
-        path: '',
-        component: ProductDescComponent
-      },
-      {
-        path: 'seller/:id',
-        component: SellerInfoComponent
-      }
-    ]
-  },
-  {path: '**', component: RouterCode404Component}
-];
+import {NavbarComponent} from './navbar/navbar.component';
+import {FooterComponent} from './footer/footer.component';
+import {SearchComponent} from './search/search.component';
+import {CarouselComponent} from './carousel/carousel.component';
+import {ProductComponent} from './product/product.component';
+import {StarsComponent} from './stars/stars.component';
 
 @NgModule({
   declarations: [
@@ -81,17 +66,24 @@ const routes: Routes = [
     RouterCode404Component,
     ProductDescComponent,
     SellerInfoComponent,
-    ChatComponent
+    ChatComponent,
+    NavbarComponent,
+    FooterComponent,
+    SearchComponent,
+    CarouselComponent,
+    ProductComponent,
+    StarsComponent,
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpModule,
-    RouterModule.forRoot(routes)
+    AppRoutingModule
   ],
   providers: [
     LoginGuard,
-    UnsavedGuard
+    UnsavedGuard,
+    ProductResolve
   ],
   bootstrap: [AppComponent]
 })

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 
 @Component({
   selector: 'app-router-home',
@@ -6,10 +6,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./router-home.component.css']
 })
 export class RouterHomeComponent implements OnInit {
-
-  constructor() { }
+  constructor() {
+  }
 
   ngOnInit() {
   }
-
 }

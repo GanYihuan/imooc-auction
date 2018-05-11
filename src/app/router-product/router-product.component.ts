@@ -9,13 +9,23 @@ import {ActivatedRoute, Params} from '@angular/router';
 export class RouterProductComponent implements OnInit {
   public productId: number;
   public test: boolean;
+  public productName: string;
 
   constructor(private routeInfo: ActivatedRoute) {
-    routeInfo.params.subscribe((params: Params) => this.productId = params['id']);
-    routeInfo.queryParams.subscribe((params: Params) => this.test = params['test']);
-    // this.productId = this.routeInfo.snapshot.params['id'];
   }
 
   ngOnInit() {
+    this.routeInfo.params.subscribe((params: Params) => this.productId = params['id']);
+    this.routeInfo.data.subscribe((data: { product: RouterProduct }) => {
+      this.productId = data.product.id;
+      this.productName = data.product.name;
+    });
+    this.routeInfo.queryParams.subscribe((params: Params) => this.test = params['test']);
+    this.productId = this.routeInfo.snapshot.params['id'];
+  }
+}
+
+export class RouterProduct {
+  constructor(public id: number, public name: string) {
   }
 }
