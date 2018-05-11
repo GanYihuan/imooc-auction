@@ -17,10 +17,10 @@ const routes: Routes = [
   {path: 'chat', component: ChatComponent, outlet: 'aux'},
   {
     path: 'product/:id',
-    // resolve: {product: ProductResolve},
     component: RouterProductComponent,
     // canActivate: [LoginGuard],
     // canDeactivate: [UnsavedGuard],
+    // resolve: {product: ProductResolve},
     children: [
       {
         path: '',

@@ -10,9 +10,9 @@ export class SellerInfoComponent implements OnInit {
   private sellerId: number;
 
   constructor(private routeInfo: ActivatedRoute) {
-    this.sellerId = routeInfo.snapshot.params['id'];
   }
 
   ngOnInit() {
+    this.sellerId = this.routeInfo.snapshot.params['id'];
   }
 }
