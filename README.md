@@ -197,3 +197,7 @@ _✨_
 
 ## 4-2: Dependency injection introduce
 _✨✨✨✨_
+
+
+## 4-3: Dependency injection introduce
+_✨✨✨✨_
