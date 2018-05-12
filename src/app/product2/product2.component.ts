@@ -1,5 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {Product, ProductService} from '../shared/product.service';
+
 // import {AnotherProductService} from '../shared/another-product.service';
 
 @Component({
@@ -18,6 +19,6 @@ export class Product2Component implements OnInit {
   }
 
   ngOnInit() {
-    this.product = this.productService.getProduct();
+    // this.product = this.productService.getProduct();
   }
 }
