@@ -189,3 +189,11 @@ _✨✨✨✨✨_
 
 ## 3-9: modify auction
 _✨✨✨_
+
+
+## 4-1: Dependency injection
+_✨_
+
+
+## 4-2: Dependency injection introduce
+_✨✨✨✨_
