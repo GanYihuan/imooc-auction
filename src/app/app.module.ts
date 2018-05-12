@@ -12,6 +12,10 @@ import {ProductComponent} from './product/product.component';
 import {ProductDetailComponent} from './product-detail/product-detail.component';
 import {HomeComponent} from './home/home.component';
 import {AppRoutingModule} from './app-routing.module';
+import {Product1Component} from './product1/product1.component';
+import {Product2Component} from './product2/product2.component';
+import {ProductService} from './shared/product.service';
+import {LoggerService} from './shared/logger.service';
 
 @NgModule({
   declarations: [
@@ -23,7 +27,9 @@ import {AppRoutingModule} from './app-routing.module';
     ProductComponent,
     StarsComponent,
     ProductDetailComponent,
-    HomeComponent
+    HomeComponent,
+    Product1Component,
+    Product2Component
   ],
   imports: [
     BrowserModule,
@@ -31,7 +37,10 @@ import {AppRoutingModule} from './app-routing.module';
     HttpModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [
+    ProductService,
+    LoggerService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule {

@@ -201,3 +201,11 @@ _✨✨✨✨_
 
 ## 4-3: Dependency injection introduce
 _✨✨✨✨_
+##### install
+```
+ng g component product1
+ng g component product2
+ng g service shared/product
+ng g service shared/anotherProduct
+ng g service shared/logger
+```
