@@ -191,6 +191,7 @@ _✨✨✨✨✨_
 _✨✨✨_
 
 
+## branch di
 ## 4-1: Dependency injection
 _✨_
 
@@ -211,6 +212,9 @@ ng g service shared/logger
 ```
 
 
-## branch di
 ## 4-4: useFactory
+_✨✨✨_
+
+
+## 4-5: Injectable hierarchy
 _✨✨✨_
