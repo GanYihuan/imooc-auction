@@ -11,8 +11,13 @@ import {StarsComponent} from './stars/stars.component';
 import {ProductComponent} from './product/product.component';
 import {ProductDetailComponent} from './product-detail/product-detail.component';
 import {HomeComponent} from './home/home.component';
+import {Routes, RouterModule} from '@angular/router';
 import {ProductService} from './shared/product.service';
-import {AppRoutingModule} from './app-routing.module';
+
+const routeConfig: Routes = [
+  {path: '', component: HomeComponent},
+  {path: 'product/:productId', component: ProductDetailComponent}
+];
 
 @NgModule({
   declarations: [
@@ -30,7 +35,7 @@ import {AppRoutingModule} from './app-routing.module';
     BrowserModule,
     FormsModule,
     HttpModule,
-    AppRoutingModule
+    RouterModule.forRoot(routeConfig)
   ],
   providers: [ProductService],
   bootstrap: [AppComponent]
